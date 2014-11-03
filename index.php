@@ -1,12 +1,14 @@
 <?php
-	require 'vendor/autoload.php';
+  // require composer autoload (load all my libraries)
+  require 'vendor/autoload.php';
   
+  // require my models
   require 'models/Book.php';
 
-  // Slim initiatilisation
+  // Slim initialisation
   $app = new \Slim\Slim(array(
-    'view' => '\Slim\LayoutView',
-    'layout' => 'layouts/main.php'
+    'view' => '\Slim\LayoutView', // I activate slim layout component
+    'layout' => 'layouts/main.php' // I define my main layout
   ));
 
   // hook before.router, now $app is accessible in my views
@@ -29,7 +31,7 @@
         "root_path" => $root_path
       ) 
     );
-  })->name('root');
+  })->name('root'); // named route so I can use with "urlFor" method
 
   // GET /books/:book_id
   $app->get('/books/:book_id', function ($book_id) use ($app) {
@@ -38,5 +40,7 @@
       'books/show.php', 
       array("book" => $book)
     );
-  })->name('book');
+  })->name('book'); // named route so I can use with "urlFor" method
+
+  // always need to be at the bottom of this file !
   $app->run();

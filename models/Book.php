@@ -2,6 +2,7 @@
   class Book {
 
     static function all() {
+      // fake response of a "SELECT * from books" SQL request
       return array(
         array(
           "id" => 1,
@@ -19,6 +20,7 @@
     }
 
     static function getBook($book_id) {
+      // fake response of a "SELECT * from books WHERE ID = $book_id" SQL request
       return array(
         "id" => 1,
         "title" => "Alice au pays des merveilles",

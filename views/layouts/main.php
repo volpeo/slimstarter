@@ -7,8 +7,14 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h1>My book store</h1>
-          <?php echo $yield ?>
+          
+          <div class="page-header">
+            <h1>My book store <small>A brief exemple to slimframework</small></h1>
+          </div>
+          <?php 
+            // my view content will be placed here
+            echo $yield 
+          ?>
         </div>
       </div>
     </div>
