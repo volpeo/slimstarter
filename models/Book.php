@@ -1,7 +1,7 @@
 <?php
   class Book {
 
-    function all() {
+    static function all() {
       return array(
         array(
           "id" => 1,
@@ -18,7 +18,7 @@
       );
     }
 
-    function getBook($book_id) {
+    static function getBook($book_id) {
       return array(
         "id" => 1,
         "title" => "Alice au pays des merveilles",
