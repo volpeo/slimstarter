@@ -1,6 +1,6 @@
 # Slimstarter
 
-A simple starter for php slim framework.
+A simple starter for php slim framework (demo available here: https://slimstarter.herokuapp.com).
 
 ## Dependencies
 Install dependencies via composer
