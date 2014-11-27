@@ -7,6 +7,9 @@ Install dependencies via composer
   
     composer install
     
+Ubuntu/unix : http://sheebypanda.com/installer-composer-sur-ubuntu/
+Windows: https://getcomposer.org/Composer-Setup.exe
+    
 ## Organisation
 
 Router + controllers are in index.php, you can decouple it and organize it better.
