@@ -1,9 +1,14 @@
 <?php
   // require composer autoload (load all my libraries)
   require 'vendor/autoload.php';
+
+  // require database configuration (with Eloquent)
+  require 'db/config.php';
   
+
   // require my models
   require 'models/Book.php';
+  session_start();
 
   // Slim initialisation
   $app = new \Slim\Slim(array(
@@ -22,6 +27,8 @@
 
   // GET /
   $app->get('/', function() use ($app) {
+    // $app->flashNow('success', "C'est très bien !");
+    $app->flashNow('error', "C'est très mal !");
     $books = Book::all();
     $root_path = $app->urlFor('root');
     $app->render( 

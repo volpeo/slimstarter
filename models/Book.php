@@ -1,23 +1,26 @@
 <?php
-  class Book {
 
-    static function all() {
-      // fake response of a "SELECT * from books" SQL request
-      return array(
-        array(
-          "id" => 1,
-          "title" => "Alice au pays des merveilles"
-        ),
-        array(
-          "id" => 2,
-          "title" => "Tintin au Tibet"
-        ),
-        array(
-          "id" => 3,
-          "title" => "Le parfum"
-        )
-      );
-    }
+  use Illuminate\Database\Eloquent\Model as Eloquent;
+
+  class Book extends Eloquent {
+
+    // static function all() {
+    //   // fake response of a "SELECT * from books" SQL request
+    //   return array(
+    //     array(
+    //       "id" => 1,
+    //       "title" => "Alice au pays des merveilles"
+    //     ),
+    //     array(
+    //       "id" => 2,
+    //       "title" => "Tintin au Tibet"
+    //     ),
+    //     array(
+    //       "id" => 3,
+    //       "title" => "Le parfum"
+    //     )
+    //   );
+    // }
 
     static function getBook($book_id) {
       // fake response of a "SELECT * from books WHERE ID = $book_id" SQL request
